@@ -6,10 +6,15 @@ Ported over from my Sublime Text plugin by the same name: [Rails Latest Migratio
 
 Usage
 --
+### Via Command Pallette
 1. Open up your Rails project *(note: for the plugin to work the project must have been opened in Atom at its root)*.
 2. Bring up the command pallette (CMD+SHIFT+P on Mac, CTRL+SHIFT+P on Windows).
 3. Type in "latest", and select "Rails Latest Migration: Find" from the list.
 4. And there it is, your latest migration!
+
+### Via keymap
+1. Open up your Rails project *(note: for the plugin to work the project must have been opened in Atom at its root)*.
+2. Type "CTRL-CMD-l", and there it is, your latest migration!
 
 Thanks
 --

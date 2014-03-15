@@ -1,5 +1,5 @@
 {
-  "name": "Rails Latest Migration",
+  "name": "rails-latest-migration",
   "main": "./lib/rails-latest-migration",
   "version": "0.0.1",
   "description": "Opens the latest migration in a Rails app",

@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "Opens the latest migration in a Rails app",
   "activationEvents": ["rails-latest-migration:find"],
-  "repository": "https://github.com/atom/rails-latest-migration",
+  "repository": "https://github.com/alexpls/rails-latest-migration-atom",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"

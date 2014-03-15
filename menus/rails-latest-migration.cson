@@ -1,0 +1,11 @@
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'rails-latest-migration'
+      'submenu': [
+        { 'label': 'Find latest migration', 'command': 'rails-latest-migration:find' }
+      ]
+    ]
+  }
+]

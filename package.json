@@ -1,0 +1,14 @@
+{
+  "name": "Rails Latest Migration",
+  "main": "./lib/rails-latest-migration",
+  "version": "0.0.1",
+  "description": "Opens the latest migration in a Rails app",
+  "activationEvents": ["rails-latest-migration:find"],
+  "repository": "https://github.com/atom/rails-latest-migration",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}

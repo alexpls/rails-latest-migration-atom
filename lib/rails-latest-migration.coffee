@@ -10,7 +10,10 @@ module.exports =
 
     if @isRailsDir(dir)
       latest_migration_path = @getLatestMigration(dir)
-      atom.workspace.open(latest_migration_path)
+      if latest_migration_path
+        atom.workspace.open(latest_migration_path)
+      else
+        alert "Uh oh! Could not find any migrations in your db/migrate directory. Please add some and try again."
     else
       alert "Uh oh! This doesn't look like a Rails project. Please open up the root of a Rails app and try again."
 
@@ -30,5 +33,9 @@ module.exports =
 
   getLatestMigration: (dir) ->
     migrations_dir = @getMigrationsDir(dir)
-    migrations = fs.readdirSync(migrations_dir)
-    return Path.join(migrations_dir, migrations[migrations.length-1])
+    migrations = fs.readdirSync(migrations_dir).filter (elem) ->
+      stat = fs.statSync(Path.join(migrations_dir, elem))
+      return stat.isFile()
+
+    if migrations.length
+      Path.join(migrations_dir, migrations[migrations.length-1])

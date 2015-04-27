@@ -16,10 +16,12 @@ Usage
 
 ### Via keymap
 1. Open up your Rails project *(note: for the plugin to work the project must have been opened in Atom at its root)*.
-2. Type "CTRL-CMD-l", and there it is, your latest migration!
-
-
+2. Type "CTRL-CMD-L", and there it is, your latest migration!
 
 Thanks
 --
 Thanks to @jonathansimmons for suggesting this plugin, and providing me with the Atom beta invite that allowed me to build it!
+
+License
+--
+The MIT License (MIT) - for more info see [LICENSE.md](https://github.com/alexpls/rails-latest-migration-atom/blob/master/LICENSE.md)

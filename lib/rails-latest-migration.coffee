@@ -3,7 +3,8 @@ Path = require 'path'
 
 module.exports =
   activate: ->
-    atom.workspaceView.command "rails-latest-migration:find", => @find()
+    atom.commands.add "atom-workspace",
+      "rails-latest-migration:find": => @find()
 
   find: ->
     dir = atom.project.getRootDirectory()

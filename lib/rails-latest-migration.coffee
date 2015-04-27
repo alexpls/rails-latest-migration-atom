@@ -7,7 +7,7 @@ module.exports =
       "rails-latest-migration:find": => @find()
 
   find: ->
-    dir = atom.project.getRootDirectory()
+    dir = atom.project.getDirectories()[0]
 
     if @isRailsDir(dir)
       latest_migration_path = @getLatestMigration(dir)

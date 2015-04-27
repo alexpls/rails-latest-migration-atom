@@ -3,9 +3,9 @@
   "main": "./lib/rails-latest-migration",
   "version": "1.1.2",
   "description": "Opens the latest migration in a Rails app",
-  "activationEvents": [
-    "rails-latest-migration:find"
-  ],
+  "activationCommands": {
+    "atom-workspace": ["rails-latest-migration:find"]
+  },
   "repository": "https://github.com/alexpls/rails-latest-migration-atom",
   "license": "MIT",
   "engines": {

@@ -1,2 +1,3 @@
 'atom-text-editor':
   'ctrl-cmd-l': 'rails-latest-migration:find'
+  'cmd-shift-m': 'rails-latest-migration:list'

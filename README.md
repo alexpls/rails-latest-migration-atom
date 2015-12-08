@@ -13,10 +13,12 @@ Usage
 2. Bring up the command pallette (CMD+SHIFT+P on Mac, CTRL+SHIFT+P on Windows).
 3. Type in "latest", and select "Rails Latest Migration: Find" from the list.
 4. And there it is, your latest migration!
+5. You can select "Rails Latest Migration: List" to open the list of all migrations.
 
 ### Via keymap
 1. Open up your Rails project *(note: for the plugin to work the project must have been opened in Atom at its root)*.
 2. Type "CTRL-CMD-L", and there it is, your latest migration!
+3. Type "SHIFT-CMD-M" to see the list of all migrations.
 
 Thanks
 --

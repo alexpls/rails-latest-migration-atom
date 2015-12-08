@@ -1,18 +1,30 @@
 fs = require 'fs'
 Path = require 'path'
+MigrationListView = require './migration-list-view'
 
 module.exports =
   activate: ->
     atom.commands.add "atom-workspace",
-      "rails-latest-migration:find": => @find()
+      "rails-latest-migration:find": => @find(),
+      "rails-latest-migration:list": => @list()
 
   find: ->
+    @fetchListOfMigrations (migrations) ->
+      latest_migration_path = migrations[0]
+      atom.workspace.open(latest_migration_path)
+
+  list: ->
+    @fetchListOfMigrations (files) ->
+      new MigrationListView(files)
+
+  fetchListOfMigrations: (callback) ->
     dir = atom.project.getDirectories()[0]
 
     if @isRailsDir(dir)
-      latest_migration_path = @getLatestMigration(dir)
-      if latest_migration_path
-        atom.workspace.open(latest_migration_path)
+      files = @getListOfMigrations(dir)
+
+      if files.length > 0
+        callback(files)
       else
         alert "Uh oh! Could not find any migrations in your db/migrate directory. Please add some and try again."
     else
@@ -32,11 +44,12 @@ module.exports =
   getMigrationsDir: (dir) ->
     Path.join(dir.getPath(), 'db', 'migrate')
 
-  getLatestMigration: (dir) ->
+  getListOfMigrations: (dir) ->
     migrations_dir = @getMigrationsDir(dir)
-    migrations = fs.readdirSync(migrations_dir).filter (elem) ->
+
+    files = fs.readdirSync(migrations_dir).filter (elem) ->
       stat = fs.statSync(Path.join(migrations_dir, elem))
       return stat.isFile()
 
-    if migrations.length
-      Path.join(migrations_dir, migrations[migrations.length-1])
+    files.reverse().map (file) ->
+      Path.join(migrations_dir, file)

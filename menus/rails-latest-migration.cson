@@ -4,7 +4,8 @@
     'submenu': [
       'label': 'Rails Latest Migration'
       'submenu': [
-        { 'label': 'Find Latest Migration', 'command': 'rails-latest-migration:find' }
+        { 'label': 'Find Latest Migration', 'command': 'rails-latest-migration:find' },
+        { 'label': 'Show List of Migrations', 'command': 'rails-latest-migration:list' }
       ]
     ]
   }

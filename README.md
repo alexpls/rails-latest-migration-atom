@@ -22,7 +22,8 @@ Usage
 
 Thanks
 --
-Thanks to @jonathansimmons for suggesting this plugin, and providing me with the Atom beta invite that allowed me to build it!
+- Thanks to @jonathansimmons for suggesting this plugin, and providing me with the Atom beta invite that allowed me to build it!
+- Thanks to @jastkand for contributing the list of all migrations!
 
 License
 --

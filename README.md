@@ -6,6 +6,8 @@ Ported over from my Sublime Text plugin by the same name: [Rails Latest Migratio
 
 [Find Rails Latest Migration on the atom.io package manager here.](https://atom.io/packages/rails-latest-migration)
 
+![Rails latest migration screenshot](https://raw.githubusercontent.com/alexpls/rails-latest-migration-atom/gh-pages/rails-latest-migration-screenshot.png)
+
 Usage
 --
 ### Via Command Pallette

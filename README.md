@@ -22,6 +22,13 @@ Usage
 2. Type "CTRL-CMD-L", and there it is, your latest migration!
 3. Type "SHIFT-CMD-M" to see the list of all migrations.
 
+## Visual Studio Code
+
+Using VSCode? [tmikoss](https://github.com/tmikoss) has got you covered, check out the VSCode version of this plugin here: [https://github.com/tmikoss/rails-latest-migration](https://github.com/tmikoss/rails-latest-migration).
+
+## Sublime Text
+If you're using Sublime Text, there's a version of this plugin for you too! Check out [https://github.com/alexpls/Rails-Latest-Migration](https://github.com/alexpls/Rails-Latest-Migration).
+
 Thanks
 --
 - Thanks to @jonathansimmons for suggesting this plugin, and providing me with the Atom beta invite that allowed me to build it!
